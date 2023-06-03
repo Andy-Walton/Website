@@ -20,7 +20,8 @@ Below are a few ways to make sure all of the plots you make in a session match a
 ```{r change_default_theme, warning=FALSE, message=FALSE}
 #The default theme
 library(ggplot2)
-ggplot(mtcars, aes(factor(carb), fill=factor(cyl))) + geom_bar()
+ggplot(mtcars, aes(factor(carb), fill=factor(cyl))) + 
+  geom_bar()
 
 #Change this to desired ggplot2 theme
 theme_set(theme_void())
@@ -58,7 +59,9 @@ library(ggplot2)
 library(ggpubfigs)
 
 # Simply add the friendly_pal() and theme_big_simple() elements to each ggplot command
-ggplot(mtcars, aes(factor(carb), fill=factor(cyl))) + geom_bar() + scale_fill_manual(values = friendly_pal("ito_seven")) + theme_big_simple()
+ggplot(mtcars, aes(factor(carb), fill=factor(cyl))) + 
+  geom_bar() + 
+  scale_fill_manual(values = friendly_pal("ito_seven")) + theme_big_simple()
 ```
 
 Another which stores your default theme between sessions is [thematic](https://rstudio.github.io/thematic/).
