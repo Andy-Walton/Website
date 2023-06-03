@@ -11,6 +11,7 @@ I created this list of little r tricks that I've found interesting.
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+
 ## 1. Setting a theme for all your plots
 
 Below are a few ways to make sure all of the plots you make in a session match a specific theme, without having to write this out for each one.
