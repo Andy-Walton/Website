@@ -1,0 +1,9 @@
+---
+title: "Friday R Tips"
+output: html_document
+date: "2023-06-03"
+---
+
+Reach out via [andyjmwalton@gmail.com](mailto:andyjmwalton@gmail.com)
+
+I mostly post about my research [here](https://twitter.com/andyjmwalton)

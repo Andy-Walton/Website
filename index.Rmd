@@ -1,0 +1,23 @@
+---
+title: "My website"
+output: 
+  html_document:
+    toc: FALSE
+---
+
+
+
+
+**Hi I'm Andy!**
+
+
+# About me
+
+I'm an MRes Biodiversity, Evolution and Conservation student at UCL
+
+🧬 Interested in Evolutionary biology, Genetics and Machine Learning
+
+🌱 I’m currently working at the Natural History Museum, London
+
+I use this site to post little R tips and tricks I've found along the way!
+

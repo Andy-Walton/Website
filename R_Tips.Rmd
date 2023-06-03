@@ -1,0 +1,79 @@
+---
+title: "Friday R Tips"
+output: html_document
+date: "2023-06-03"
+---
+
+Last updated: 2 Jun 2023
+
+I created this list of little r tricks that I've found interesting. 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 1. Setting a theme for all your plots
+
+Below are a few ways to make sure all of the plots you make in a session match a specific theme, without having to write this out for each one.
+
+### You can modify the default ggplot theme for the entire session
+```{r change_default_theme, warning=FALSE, message=FALSE}
+#The default theme
+library(ggplot2)
+ggplot(mtcars, aes(factor(carb), fill=factor(cyl))) + geom_bar()
+
+#Change this to desired ggplot2 theme
+theme_set(theme_void())
+ggplot(mtcars, aes(factor(carb), fill=factor(cyl))) + geom_bar()
+```
+
+### You can also modify this default theme for each session
+```{r modify_theme, warning=FALSE, message=FALSE}
+theme_update(panel.grid.minor = element_line(colour = "red"))
+ggplot(mtcars, aes(factor(carb), fill=factor(cyl))) + geom_bar()
+```
+
+### Or you can create your own theme
+```{r own_theme, warning=FALSE, message=FALSE}
+library(ggplot2)
+Ugly_theme <- function (base_size = 12, base_family = "") {
+    theme_bw() %+replace% 
+    theme(
+      panel.background = element_rect(fill = "black"),
+      panel.border = element_rect(color = "white", fill = NA),
+      axis.line = element_line(color = "white"),
+      axis.ticks = element_line(color = "red"),
+      axis.text = element_text(color = "red")
+      )
+}
+
+ggplot(mtcars, aes(factor(carb), fill=factor(cyl))) + geom_bar() + Ugly_theme()
+```
+
+### There are also a couple of packages which can help
+
+A really easy alternative is using the [ggpubfigs package](https://github.com/JLSteenwyk/ggpubfigs#faq), which has a great set of default themes and colourblind friendly colour schemes
+```{r ggpubfigs, warning=FALSE, message=FALSE}
+library(ggplot2)
+library(ggpubfigs)
+
+# Simply add the friendly_pal() and theme_big_simple() elements to each ggplot command
+ggplot(mtcars, aes(factor(carb), fill=factor(cyl))) + geom_bar() + scale_fill_manual(values = friendly_pal("ito_seven")) + theme_big_simple()
+```
+
+Another which stores your default theme between sessions is [thematic](https://rstudio.github.io/thematic/).
+```{r thematic, warning=FALSE, message=FALSE, results='hide'}
+library(ggplot2)
+library(thematic)
+library(RColorBrewer)
+
+# Set your desired theme (use thematic_on in an r script not thematic_rmd())
+thematic_rmd(
+  bg = "#222222", fg = "white", qualitative = RColorBrewer::brewer.pal(8, "Dark2")
+)
+
+# Then just run this when you start a new r session
+thematic::thematic_rmd
+
+ggplot(mtcars, aes(factor(carb), fill=factor(cyl))) + geom_bar()
+
+```
