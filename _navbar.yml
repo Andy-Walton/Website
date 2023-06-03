@@ -4,7 +4,7 @@ type: inverse
 left:
   - text: "Projects"
     menu:
-       - text: "Friday R Tips"
+       - text: "Little R Tips"
          href: ./R_Tips.html
   - text: "Contact"
     href: ./contact.html
