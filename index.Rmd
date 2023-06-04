@@ -6,10 +6,13 @@ output:
 ---
 
 
+<br>
+<img src="/Users/Andy/Downloads/IMG_2059.png" width="200">
 
 
-**After learning some R to use in my degree, I use this site to post little R tips and tricks I've found along the way!**
+**After learning some R to use in my degree, I use this site to post little tips and tricks I've found along the way!**
 
+<br>
 
 # About me
 
@@ -17,5 +20,7 @@ I'm an MRes Biodiversity, Evolution and Conservation student at UCL
 
 🧬 Interested in Evolutionary biology, Genetics and Machine Learning
 
-🌱 I’m currently working at the Natural History Museum, London
+🌱 I've just finished a project at the Institute of Zoology, London aiming improve global biodivesity loss predictions using remote sensing and deep learning
+
+🐘 I’m currently working at the Natural History Museum, London researching elephant evolution using ancient DNA
 

@@ -454,7 +454,6 @@ div.tocify {
 </div>
 
 
-<p>Last updated: 2 Jun 2023</p>
 <p>I created this list of little r tricks that I’ve found
 interesting.</p>
 <div id="setting-a-theme-for-all-your-plots" class="section level2">
@@ -462,9 +461,12 @@ interesting.</p>
 <p>Below are a few ways to make sure all of the plots you make in a
 session match a specific theme, without having to write this out for
 each one.</p>
-<div id="you-can-modify-the-default-ggplot-theme-for-the-entire-session"
+<p><br></p>
+<div
+id="a-you-can-modify-the-default-ggplot-theme-for-the-entire-session"
 class="section level3">
-<h3>You can modify the default ggplot theme for the entire session</h3>
+<h3>(a) You can modify the default ggplot theme for the entire
+session</h3>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#The default theme</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="fu">factor</span>(carb), <span class="at">fill=</span><span class="fu">factor</span>(cyl))) <span class="sc">+</span> </span>
@@ -475,15 +477,15 @@ class="section level3">
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="fu">factor</span>(carb), <span class="at">fill=</span><span class="fu">factor</span>(cyl))) <span class="sc">+</span> <span class="fu">geom_bar</span>()</span></code></pre></div>
 <p><img src="R_Tips_files/figure-html/change_default_theme-2.png" width="672" /></p>
 </div>
-<div id="you-can-also-modify-this-default-theme-for-each-session"
+<div id="b-you-can-also-modify-this-default-theme-for-each-session"
 class="section level3">
-<h3>You can also modify this default theme for each session</h3>
+<h3>(b) You can also modify this default theme for each session</h3>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_update</span>(<span class="at">panel.grid.minor =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">&quot;red&quot;</span>))</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="fu">factor</span>(carb), <span class="at">fill=</span><span class="fu">factor</span>(cyl))) <span class="sc">+</span> <span class="fu">geom_bar</span>()</span></code></pre></div>
 <p><img src="R_Tips_files/figure-html/modify_theme-1.png" width="672" /></p>
 </div>
-<div id="or-you-can-create-your-own-theme" class="section level3">
-<h3>Or you can create your own theme</h3>
+<div id="c-or-you-can-create-your-own-theme" class="section level3">
+<h3>(c) Or you can create your own theme</h3>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>Ugly_theme <span class="ot">&lt;-</span> <span class="cf">function</span> (<span class="at">base_size =</span> <span class="dv">12</span>, <span class="at">base_family =</span> <span class="st">&quot;&quot;</span>) {</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_bw</span>() <span class="sc">%+replace%</span> </span>
@@ -498,10 +500,11 @@ class="section level3">
 <span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="fu">factor</span>(carb), <span class="at">fill=</span><span class="fu">factor</span>(cyl))) <span class="sc">+</span> <span class="fu">geom_bar</span>() <span class="sc">+</span> <span class="fu">Ugly_theme</span>()</span></code></pre></div>
 <p><img src="R_Tips_files/figure-html/own_theme-1.png" width="672" /></p>
+<p><br></p>
 </div>
-<div id="there-are-also-a-couple-of-packages-which-can-help"
+<div id="d-there-are-also-a-couple-of-packages-which-can-help"
 class="section level3">
-<h3>There are also a couple of packages which can help</h3>
+<h3>(d) There are also a couple of packages which can help</h3>
 <p>A really easy alternative is using the <a
 href="https://github.com/JLSteenwyk/ggpubfigs#faq">ggpubfigs
 package</a>, which has a great set of default themes and colourblind
@@ -525,6 +528,7 @@ href="https://rstudio.github.io/thematic/">thematic</a>.</p>
 <span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="fu">factor</span>(carb), <span class="at">fill=</span><span class="fu">factor</span>(cyl))) <span class="sc">+</span> <span class="fu">geom_bar</span>()</span></code></pre></div>
 <p><img src="R_Tips_files/figure-html/thematic-1.png" width="672" /></p>
+<p><br><br></p>
 </div>
 </div>
 <div id="highlight-regions-of-interest-in-a-plot"
@@ -533,7 +537,7 @@ class="section level2">
 <p>Combining the <code>geom_rect</code> and <code>geom_text</code>
 functions in <code>ggplot2</code> is a really great way to highlight
 regions of interest in a plot. For example, let’s look at the birth rate
-in Scotland in the 20th century (<a
+in Scotland in the 20<sup>th</sup> century (<a
 href="https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/births/births-time-series-data">source</a>).</p>
 <p>The <code>xmin</code> and <code>xmax</code> in <code>geom_rect</code>
 allow us to set the regions the highlighted box will cover. The
