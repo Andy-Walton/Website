@@ -92,7 +92,7 @@ thematic::thematic_off()
 
 Combining the `geom_rect` and `geom_text` functions in `ggplot2` is a really great way to highlight regions of interest in a plot. For example, let's look at the birth rate in Scotland in the 20^th^ century ([source](https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/births/births-time-series-data)).
 
-The `xmin` and `xmax` in `geom_rect` allow us to set the regions the highlighted box will cover. The `x` and `y` in `gemo_text` allow us to position the labels, with vjust adjusting this vertically and hjust adjusting it horizontally.
+The `xmin` and `xmax` in `geom_rect` allow us to set the regions the highlighted box will cover. The `x` and `y` in `geom_text` allow us to position the labels, with `vjust` adjusting this vertically and `hjust` adjusting it horizontally.
 ```{r scotland_data, echo=FALSE, message=FALSE}
 df <- read.csv("/Users/Andy/Desktop/birth_rate.csv")
 

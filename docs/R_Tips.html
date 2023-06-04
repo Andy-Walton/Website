@@ -547,9 +547,9 @@ in Scotland in the 20<sup>th</sup> century (<a
 href="https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/births/births-time-series-data">source</a>).</p>
 <p>The <code>xmin</code> and <code>xmax</code> in <code>geom_rect</code>
 allow us to set the regions the highlighted box will cover. The
-<code>x</code> and <code>y</code> in <code>gemo_text</code> allow us to
-position the labels, with vjust adjusting this vertically and hjust
-adjusting it horizontally.</p>
+<code>x</code> and <code>y</code> in <code>geom_text</code> allow us to
+position the labels, with <code>vjust</code> adjusting this vertically
+and <code>hjust</code> adjusting it horizontally.</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Births)) <span class="sc">+</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_rect</span>(<span class="fu">aes</span>(<span class="at">xmin =</span> <span class="dv">1914</span>, <span class="at">xmax =</span> <span class="dv">1918</span>, <span class="at">ymin =</span> <span class="sc">-</span><span class="cn">Inf</span>, <span class="at">ymax =</span> <span class="cn">Inf</span>), <span class="at">fill =</span> <span class="st">&quot;red&quot;</span>, <span class="at">alpha =</span> <span class="fl">0.002</span>) <span class="sc">+</span></span>
