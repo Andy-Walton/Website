@@ -54,7 +54,7 @@ ggplot(mtcars, aes(factor(carb), fill=factor(cyl))) + geom_bar() + Ugly_theme()
 ### There are also a couple of packages which can help
 
 A really easy alternative is using the [ggpubfigs package](https://github.com/JLSteenwyk/ggpubfigs#faq), which has a great set of default themes and colourblind friendly colour schemes
-```{r ggpubfigs, warning=FALSE, message=FALSE}
+```{r ggpubfigs, warning=FALSE, message=FALSE, echo=2:7}
 library(ggplot2)
 library(ggpubfigs)
 
@@ -65,7 +65,7 @@ ggplot(mtcars, aes(factor(carb), fill=factor(cyl))) +
 ```
 
 Another which stores your default theme between sessions is [thematic](https://rstudio.github.io/thematic/).
-```{r thematic, warning=FALSE, message=FALSE, results='hide'}
+```{r thematic, warning=FALSE, message=FALSE, results='hide', echo=5:11}
 library(ggplot2)
 library(thematic)
 library(RColorBrewer)
@@ -80,4 +80,36 @@ thematic::thematic_rmd
 
 ggplot(mtcars, aes(factor(carb), fill=factor(cyl))) + geom_bar()
 
+thematic::thematic_off()
+```
+
+
+
+
+## 2. Highlight regions of interest in a plot
+
+Combining the `geom_rect` and `geom_text` functions in `ggplot2` is a really great way to highlight regions of interest in a plot. For example, let's look at the birth rate in Scotland in the 20th century ([source](https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/births/births-time-series-data)).
+
+The `xmin` and `xmax` in `geom_rect` allow us to set the regions the highlighted box will cover. The `x` and `y` in `gemo_text` allow us to position the labels, with vjust adjusting this vertically and hjust adjusting it horizontally.
+```{r scotland_data, echo=FALSE, message=FALSE}
+df <- read.csv("/Users/Andy/Desktop/birth_rate.csv")
+
+df$Births <- as.numeric(gsub(",", "", df$Births))
+```
+
+```{r scotland_geom_rect, message=FALSE, echo=3:16}
+library(ggplot2)
+library(ggpubfigs)
+
+ggplot(df, aes(x = Year, y = Births)) +
+  geom_line() +
+  geom_rect(aes(xmin = 1914, xmax = 1918, ymin = -Inf, ymax = Inf), fill = "red", alpha = 0.002) +
+  geom_rect(aes(xmin = 1939, xmax = 1945, ymin = -Inf, ymax = Inf), fill = "red", alpha = 0.002) +
+  geom_text(aes(x = 1918, y = max(Births), label = "WWI"), color = "black", vjust = 30, hjust = -0.3, size = 3.5) +
+  geom_text(aes(x = 1945, y = max(Births), label = "WWII"), color = "black", vjust = 30, hjust = -0.3, size = 3.5) +
+  xlab("Year") +
+  ylab("No. of babies born in Scotland") +
+  guides(fill = guide_legend(override.aes = list(fill = "red"),
+                             title = "World war")) +
+  theme_simple()
 ```
