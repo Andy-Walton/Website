@@ -4,7 +4,7 @@ output: html_document
 date: "2023-06-03"
 ---
 
-Last updated: 2 Jun 2023
+Last updated: 5 Jun 2023
 
 I created this list of little r tricks that I've found interesting. 
 ```{r setup, include=FALSE}
@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-## 1. Setting a theme for all your plots
+## 1 Setting a theme for all your plots
 
 Below are a few ways to make sure all of the plots you make in a session match a specific theme, without having to write this out for each one.
 
@@ -86,7 +86,7 @@ thematic::thematic_off()
 
 
 
-## 2. Highlight regions of interest in a plot
+## 2 Highlight regions of interest in a plot
 
 Combining the `geom_rect` and `geom_text` functions in `ggplot2` is a really great way to highlight regions of interest in a plot. For example, let's look at the birth rate in Scotland in the 20th century ([source](https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/births/births-time-series-data)).
 
