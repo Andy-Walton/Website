@@ -7,7 +7,7 @@ output:
 
 
 <br>
-<img src="/Users/Andy/Downloads/IMG_2059.png" width="200">
+<img src="Images/IMG_2059.png" width="200">
 
 
 **After learning some R to use in my degree, I use this site to post little tips and tricks I've found along the way!**
