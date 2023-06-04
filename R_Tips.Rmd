@@ -111,7 +111,5 @@ ggplot(df, aes(x = Year, y = Births)) +
   geom_text(aes(x = 1945, y = max(Births), label = "WWII"), color = "black", vjust = 30, hjust = -0.3, size = 3.5) +
   xlab("Year") +
   ylab("No. of babies born in Scotland") +
-  guides(fill = guide_legend(override.aes = list(fill = "red"),
-                             title = "World war")) +
   theme_simple()
 ```
