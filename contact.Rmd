@@ -1,9 +1,16 @@
 ---
 title: "Contact me"
 output: html_document
-date: "2023-06-03"
 ---
+Feel free to get in touch if you have any questions or suggestions for new R tricks. Also always very happy to chat about anything more sciencey!
+
+I'm very much still learning so any and all advice is welcome!
+
+<img src="Images/code_quality.png" width="600">
+
+([Souce](https://xkcd.com/1513/))
+
 
 Reach out via [andyjmwalton@gmail.com](mailto:andyjmwalton@gmail.com)
 
-I mostly post about my research [here](https://twitter.com/andyjmwalton)
+I also mostly post about my research [here](https://twitter.com/andyjmwalton)
