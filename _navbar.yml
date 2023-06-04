@@ -11,3 +11,5 @@ left:
 right:
   - icon: fa-github fa-lg
     href: https://github.com/Andy-Walton
+  - icon: fa-twitter fa-lg
+    href: https://twitter.com/andyjmwalton
