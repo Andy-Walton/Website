@@ -123,7 +123,7 @@ When we use models to examine the relationship between data, we make assumptions
 
 For instance, a linear regression to determine whether there is a correlation between education and fertility using the `Swiss` dataset in r.
 ```{r Base_diagnostic_plots, message=FALSE, results='hide'}
-model_1 <- lm(Fertility~Education, data=swiss)
+model_1 <- lm(Fertility~Education + Agriculture, data=swiss)
 
 par(mfrow = c(2, 2))
 plot(model_1)

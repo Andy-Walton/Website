@@ -572,7 +572,7 @@ violated.</p>
 <p>For instance, a linear regression to determine whether there is a
 correlation between education and fertility using the <code>Swiss</code>
 dataset in r.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>model_1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(Fertility<span class="sc">~</span>Education, <span class="at">data=</span>swiss)</span>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>model_1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(Fertility<span class="sc">~</span>Education <span class="sc">+</span> Agriculture, <span class="at">data=</span>swiss)</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">2</span>))</span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(model_1)</span></code></pre></div>
@@ -593,10 +593,10 @@ may be influenced by outliers. We can check this using
 <code>check_outliers()</code> and <code>check_normality()</code>:</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">check_outliers</span>(model_1)</span></code></pre></div>
 <pre><code>## OK: No outliers detected.
-## - Based on the following method and threshold: cook (0.704).
+## - Based on the following method and threshold: cook (0.801).
 ## - For variable: (Whole model)</code></pre>
 <div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">check_normality</span>(model_1)</span></code></pre></div>
-<pre><code>## OK: residuals appear as normally distributed (p = 0.060).</code></pre>
+<pre><code>## OK: residuals appear as normally distributed (p = 0.089).</code></pre>
 <p><br></p>
 </div>
 
