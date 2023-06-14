@@ -560,6 +560,44 @@ and <code>hjust</code> adjusting it horizontally.</p>
 <span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;No. of babies born in Scotland&quot;</span>) <span class="sc">+</span></span>
 <span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_simple</span>()</span></code></pre></div>
 <p><img src="R_Tips_files/figure-html/scotland_geom_rect-1.png" width="672" /></p>
+<p><br><br></p>
+</div>
+<div id="better-model-diagnostic-plots" class="section level2">
+<h2>3. Better model diagnostic plots</h2>
+<p><br> When we use models to examine the relationship between data, we
+make assumptions. For instance, a linear regression assumes that the
+relationship between the two variables is linear. Diagnostic plots are a
+key way of determining if the assumptions in our chosen models are being
+violated.</p>
+<p>For instance, a linear regression to determine whether there is a
+correlation between education and fertility using the <code>Swiss</code>
+dataset in r.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>model_1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(Fertility<span class="sc">~</span>Education, <span class="at">data=</span>swiss)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">2</span>))</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(model_1)</span></code></pre></div>
+<p><img src="R_Tips_files/figure-html/Base_diagnostic_plots-1.png" width="672" /></p>
+<p>However, these can be a little tricky to interpret. Here, the
+<code>check_model</code> function in the <code>performance</code>
+library comes in handy. It gives you a reminder of what to look for in
+each plot and makes each look a bit tidier:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(performance)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(see)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="fu">check_model</span>(model_1)</span></code></pre></div>
+<p><img src="R_Tips_files/figure-html/Better_diagnostic_plots-1.png" width="672" /></p>
+<p>The package also contains functions to further dig into the results
+of these diagnostic plots. For example, it looks like the model’s
+residuals might not be normally distributed and that the model’s results
+may be influenced by outliers. We can check this using
+<code>check_outliers()</code> and <code>check_normality()</code>:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">check_outliers</span>(model_1)</span></code></pre></div>
+<pre><code>## OK: No outliers detected.
+## - Based on the following method and threshold: cook (0.704).
+## - For variable: (Whole model)</code></pre>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">check_normality</span>(model_1)</span></code></pre></div>
+<pre><code>## OK: residuals appear as normally distributed (p = 0.060).</code></pre>
+<p><br></p>
 </div>
 
 
