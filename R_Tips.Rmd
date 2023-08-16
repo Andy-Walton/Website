@@ -143,3 +143,17 @@ check_outliers(model_1)
 check_normality(model_1)
 ```
 <br>
+
+## 4. Estimate the distribution of a model family
+<br>
+It is often challenging to determine what is the best distribution to use in a model. The `check_distribution` function in the `performance` package uses machine learning to estimate just that!
+
+```{r Check_dist, message=FALSE}
+library(performance)
+library(see)
+model_2 <- lm(hp~wt, data=mtcars)
+
+check_distribution(model_2)
+plot(check_distribution(model_2))
+```
+

@@ -599,6 +599,36 @@ may be influenced by outliers. We can check this using
 <pre><code>## OK: residuals appear as normally distributed (p = 0.089).</code></pre>
 <p><br></p>
 </div>
+<div id="estimate-the-distribution-of-a-model-family"
+class="section level2">
+<h2>4. Estimate the distribution of a model family</h2>
+<p><br> It is often challenging to determine what is the best
+distribution to use in a model. The <code>check_distribution</code>
+function in the <code>performance</code> package uses machine learning
+to estimate just that!</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(performance)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(see)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>model_2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(hp<span class="sc">~</span>wt, <span class="at">data=</span>mtcars)</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="fu">check_distribution</span>(model_2)</span></code></pre></div>
+<pre><code>## # Distribution of Model Family
+## 
+## Predicted Distribution of Residuals
+## 
+##  Distribution Probability
+##        cauchy         72%
+##       tweedie          9%
+##         gamma          6%
+## 
+## Predicted Distribution of Response
+## 
+##                Distribution Probability
+##  neg. binomial (zero-infl.)         69%
+##               beta-binomial         22%
+##                   lognormal          6%</code></pre>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">check_distribution</span>(model_2))</span></code></pre></div>
+<p><img src="R_Tips_files/figure-html/Check_dist-1.png" width="672" /></p>
+</div>
 
 
 
