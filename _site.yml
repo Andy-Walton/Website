@@ -18,6 +18,8 @@ navbar:
       href: https://github.com/Andy-Walton
     - icon: fa-twitter fa-lg
       href: https://twitter.com/andyjmwalton
+    - icon: fa-linkedin fa-lg
+      href: https://www.linkedin.com/in/andyjmwalton/
 output:
   html_document:
     theme: flatly
