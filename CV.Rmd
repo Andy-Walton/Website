@@ -77,12 +77,6 @@ Email: andyjmwalton[at]gmail[dot]com | Location: London, UK
 
 <div style="margin-top: 40px;"></div>
 
-## Skills
-
-- **Programming Languages:** R, Python, C++
-- **Data Analysis:** Statistics, Data Analysis and Agent-based modelling
-- **Laboratory Techniques:** Ancient DNA extraction, Genetic library preparation
-
 ## Presentations
 1. "Myths in Genetics: Genetic Determinism, Racial Essentialism & Mendel" *Adelphi Genetics Forum, Annual Teachers' Conference*, 2024.
 2. "The History of the Panmictic Population Concept" *UGI Seminar Series*, 2024
