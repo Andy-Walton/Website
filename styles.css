@@ -1,0 +1,181 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.navbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #333;
+}
+
+.navbar-default .navbar-brand {
+    color: #333;
+    font-weight: bold;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.main-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.btn-primary {
+    background-color: #1a73e8;
+    border-color: #1a73e8;
+}
+
+.btn-primary:hover {
+    background-color: #155bbf;
+    border-color: #155bbf;
+}
+
+pre {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+code {
+    color: #e83e8c;
+    background-color: #f8f9fa;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+/* Additional styles for improved layout */
+h1 {
+  margin-bottom: 0.2em;
+}
+
+ul {
+  padding-left: 1.2em;
+}
+
+.col-md-4 {
+  margin-bottom: 1.5em;
+}
+
+@media (min-width: 768px) {
+  .col-md-4 {
+    margin-bottom: 0;
+  }
+}
+
+/* Add to your styles.css */
+.container {
+  margin-top: 2rem;
+}
+
+h1 {
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 767px) {
+  .col-md-4 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* General style for in-text images */
+.in-text-image {
+  max-width: 60%;
+  display: block;
+  margin: 30px auto;
+  border-radius: 5px;  /* This maintains consistency with your existing img style */
+}
+
+/* Add space between sections if needed */
+.section-spacer {
+  margin-top: 40px;
+}
+
+/* New styles for side-by-side images */
+.image-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+
+.side-by-side-image {
+  width: 48%;  /* Slightly less than 50% to account for spacing */
+  border-radius: 5px;
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 768px) {
+  .image-container {
+    flex-direction: column;
+  }
+  
+  .side-by-side-image {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.cv-container {
+    font-family: inherit; /* Use the site's default font */
+}
+
+.cv-container .contact-info {
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.cv-container h3 {
+    margin-bottom: 5px;
+}
+
+.cv-container .date-range {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.cv-container ul {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    padding-left: 20px; /* Consistent with your existing ul style */
+}
+
+.cv-container li {
+    margin-bottom: 5px;
+}
+
+/* For the Service, Outreach, and Diversity Initiatives section */
+.cv-container ul li strong {
+    display: inline-block;
+    margin-bottom: 5px;
+}

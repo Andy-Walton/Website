@@ -1,0 +1,95 @@
+---
+title: "Curriculum Vitae"
+output: 
+  html_document:
+    toc: false
+---
+
+<div class="cv-container">
+
+<div class="contact-info">
+Email: andyjmwalton[at]gmail[dot]com | Location: London, UK
+</div>
+
+## Education
+
+### PhD in Evolutionary Genetics | University College London (UCL)
+<div class="date-range">September 2023 - Present</div>
+
+- 2023 Adelphi Genetics Forum funded PhD Student
+- Project focused on building a new foundation for understanding how evolution shapes patterns of genetic variation. 
+- Combining evolutionary biology and historical study to scrutinise the history of the theoretical models of population genetics, including how they influence work in the field today, as well as developing new methods for the field.
+
+### MRes in Biodiversity, Evolution and Conservation | University College London (UCL)
+<div class="date-range">September 2022 - September 2023</div>
+
+- Programme to develop research skills in biosciences, including training in data analysis and communication as well as two post-graduate research projects at partner institutions.
+- Awarded course prizes for Best Presentation and Best Poster
+- Grade: Distinction
+
+### BSc(Hons) in Biological Sciences (Evolutionary Biology) | University of Edinburgh
+<div class="date-range">September 2018 - June 2022</div>
+
+-	Took courses in both technical subjects (including instruction on data analysis and lab skills) and humanities (such as science in policy and public health courses)
+-	Received training and practical experience using genomics and phylogenetics tools, including generating a novel genome sequence (from wet lab to sequence assembly and analysis)
+-	Undertook a five-month-long honours project using citizen science data to investigate warning colour variation evolution in African Monarch butterflies, involving statistical analysis and modelling in R
+
+### International Relations in the 21st Century (Summer School) | School of Oriental and African Studies (University of London)		
+<div class="date-range">Aug 2020</div>
+-	Intensive course in International Relations focused on global economies, climate change and migration
+-	Also attended a course on media training, speechwriting and public speaking skills 
+
+<div style="margin-top: 40px;"></div>
+
+## Work Experience
+
+### Postgraduate Teaching Assistant | UCL
+<div class="date-range">September 2023 - Present</div>
+
+- Assisting on a postgraduate level course in science communication for biologists and undergraduate course in genetics & society.
+- Grading assessments, leading class discussions and setting reading lists for students.
+
+### Independent Researcher | Natural History Museum, London
+<div class="date-range">May 2023 - Present</div>
+
+- Working on several projects to investigate evolution using ancient DNA. 
+- Trained in specialist lab techniques to extract thousand-year-old DNA and build genetic libraries (using next-gen sequencing techniques). Then analysing the genetic data generated using bioinformatics tools in command line and R.
+
+### Master's Researcher | Zoological Society of London (ZSL)
+<div class="date-range">January 2023 - May 2023</div>
+
+- Used deep learning and remote sensing to try and improve global biodiversity loss predictions. Aimed to improve the predictive ability of global biodiversity loss models by increasing the complexity of land use data used. 
+- Gained experience in applying artificial intelligence computer-vision techniques, using Tensorflow
+- Worked with large, complex datasets (satellite imagery and biodiversity data) in Python and R
+
+<div style="margin-top: 40px;"></div>
+
+## Service, Outreach, and Diversity Initiatives
+
+- **Co-Founder and Committee Member**, London Ancient DNA Network (2023-Present)
+  - Helped established a forum for interdisciplinary discussions for those working with ancient DNA in London
+  - Organised meetings featuring diverse speakers from various career stages, with an emphasis on informal discussions across disciplines
+
+- **Short Talk**, In2Stem programme, UCL (2024)
+  - In2scienceUK provides STEM opportunities for young individuals from low-income and disadvantaged backgrounds in the UK
+  - I gave a talk to the 2024 participants about getting into research when you're interested in multiple subjects at school and how you can find interdisciplinary academic careers
+  
+- **Student Consultant**, Ignite Consultants (2018)
+  - Worked in a small team of students, mentored by the head of the University of Otago’s MBA program, on a project for the New Zealand International Science Festival to increase their number of locations around the country (including the capital city), widen the festival’s reach within its current location and investigate the feasibility (and process) of developing an app for the event
+  - The team met multiple times per week for a semester to research and evaluate the festival’s situation and its potential for growth, using company reports, public records and interviews to gather information
+  - Engaged with stakeholders both locally, including academics and local business owners and at the national level (including personally meeting with the NZ Prime Minister’s Chief Science Advisor)
+
+<div style="margin-top: 40px;"></div>
+
+## Skills
+
+- **Programming Languages:** R, Python, C++
+- **Data Analysis:** Statistics, Data Analysis and Agent-based modelling
+- **Laboratory Techniques:** Ancient DNA extraction, Genetic library preparation
+
+## Presentations
+1. "Myths in Genetics: Genetic Determinism, Racial Essentialism & Mendel" *Adelphi Genetics Forum, Annual Teachers' Conference*, 2024.
+2. "The History of the Panmictic Population Concept" *UGI Seminar Series*, 2024
+
+</div>
+

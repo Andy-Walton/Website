@@ -2,15 +2,13 @@
 title: "Contact me"
 output: html_document
 ---
-Feel free to get in touch if you have any questions or suggestions for new R tricks. Also always very happy to chat about anything more sciencey!
 
-I'm very much still learning so any and all advice is welcome!
+<div style="margin-top: 40px;"></div>
 
-<img src="Images/code_quality.png" width="600">
+Feel free to get in touch if you have any questions about my research. I'm also always very happy to chat about anything sciencey!
 
-([Souce](https://xkcd.com/1513/))
+<div style="margin-top: 40px;"></div>
 
-
-Reach out via [andyjmwalton@gmail.com](mailto:andyjmwalton@gmail.com)
+Reach out via **andyjmwalton[at]gmail[dot]com**
 
 I also mostly post about my research [here](https://twitter.com/andyjmwalton)
