@@ -4,7 +4,7 @@ navbar:
   title: "Andy Walton"
   left:
     - text: "About"
-      href: index.html
+      href: About.html
     - text: "Research"
       href: research.html
     - text: "CV"
