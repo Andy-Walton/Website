@@ -5,11 +5,11 @@ output:
     css: styles.css
 ---
 <div style="margin-top: 40px;"></div>
-## Population Genetics and Continuous Space Modelling
+## Population Genetics Modelling
 
 ![](Images/plot.jpg){.in-text-image}
 
-Many of the models in Population Genetics are based around the panmictic population concept. In other words, often, contain assumptions of random mating, infinite population size, no migration etc. However, in nature, these assumptions are rarely the case. I'm interested in developing new models which move away from these, such as modelling populations in continuous space.
+Many of the models in Population Genetics are based around the panmictic population concept. In other words, often, contain assumptions of random mating, infinite population size, no migration etc. However, in nature, these assumptions are rarely the case. I'm interested in developing new models which move away from these, such as modelling populations in more continuous space.
 
 
 <!-- Add some space between sections -->
